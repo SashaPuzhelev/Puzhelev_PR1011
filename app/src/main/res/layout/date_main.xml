@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent" android:layout_height="match_parent">
+    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+              android:layout_marginBottom="5dp">
+        <TextView
+                android:id="@+id/textViewAboutOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Заказ"
+                android:textSize="27dp"
+                android:textAllCaps="true"
+                android:layout_span="4">
+        </TextView>
+    </TableRow>
+    <TableRow>
+        <LinearLayout>
+            <TextView
+                    android:id="@+id/textViewAboutSurname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:text="Фамилия"
+                    android:gravity="right"
+                    android:textSize="20dp">
+            </TextView>
+            <EditText
+                    android:id="@+id/editTextSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName">
+            </EditText>
+        </LinearLayout>
+    </TableRow>
+    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+              android:layout_marginBottom="5dp">
+        <LinearLayout>
+            <TextView
+                    android:id="@+id/textViewAboutName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:text="Имя"
+                    android:gravity="right"
+                    android:textSize="20dp">
+            </TextView>
+            <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName">
+            </EditText>
+        </LinearLayout>
+
+    </TableRow>
+    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginBottom="5dp">
+    <LinearLayout>
+        <TextView
+                android:id="@+id/textViewAboutQuantity"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:text="Кол-во"
+                android:gravity="right"
+                android:textSize="20dp">
+        </TextView>
+        <EditText
+                android:id="@+id/editTextQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number">
+        </EditText>
+    </LinearLayout>
+
+    </TableRow>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        >
+        <LinearLayout
+
+                android:id="@+id/linearLayout"
+                android:layout_width="380dp"
+                android:layout_height="62dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/datePicker"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.645"
+                app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+                android:id="@+id/textViewAboutDate"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Дата"
+                android:textSize="20dp"
+                android:gravity="right"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absouleteY="135dp">
+        </TextView>
+        <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="230dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="dd-MM-yyyy"
+                android:inputType="date">
+        </EditText>
+        <Button
+                android:id="@+id/buttonContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ОК"/>
+        </LinearLayout>
+    </TableRow>
+    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+              android:layout_marginBottom="10dp">
+        <LinearLayout android:paddingLeft="25dp">
+            <CheckBox
+                    android:id="@+id/checkBoxDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Доставка"
+                    android:textSize="20dp"
+                    android:layout_marginRight="25dp"
+            >
+
+            </CheckBox>
+            <CheckBox
+                    android:id="@+id/checkBoxPickUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Самовывоз"
+                    android:textSize="20dp"
+                    android:gravity="right"
+                    android:layout_marginLeft="25dp"
+            >
+            </CheckBox>
+        </LinearLayout>
+    </TableRow>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+    >
+        <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePicker"
+        >
+        </DatePicker>
+    </TableRow>
+</TableLayout>
+
